@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+<form action="thank.html" onsubmit="return validation()">
+
+  email : <input type="text" name="" id="email">
+  <label id="label1"style="color:red; visibility:hidden">Please Enter Details</label>
+                          <br><br>
+  password : <input type="password" name="" id="password">
+  <label id="label2"style="color:red; visibility:hidden">Please Enter Details</label>
+                    <br><br>
+  <input type="submit" value="Login">
+
+</form>
+
+</body>
+
+</html>
+
+<script>
+  function validation()
+   {
+
+      var email=document.getElementById('email');
+      var password=document.getElementById('password');
+
+      if(email.value.trim()=="")   //Trim removes blank spaces from the value
+      {
+        document.getElementById('label1').style.visibility="visible";
+        email.style.border="3px solid red";
+        return false;
+      }
+      if(password.value.trim()=="")
+      {
+        document.getElementById('label2').style.visibility="visible";
+        password.style.border="3px solid red";
+        return false;
+      }
+  }
+</script>
